@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Snap Burger | سناب برجر عمّان - Premium Smash Burgers</title>
+  <meta name="description" content="Snap Burger Jordan - Amman's premier gourmet smash burger spot. 100% Certified Black Angus beef, artisan daily brioche, and signature crispy lace edges. Order via WhatsApp now!">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="images/snap_logo.jpg">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="live-indicator"></span>
+        <span class="top-status-text" data-en="KITCHEN SIZZLING • Open Daily 12:00 PM – 2:00 AM (Thu-Fri till 3:30 AM)" data-ar="المطبخ شغال الآن • يومياً ١٢:٠٠ ظهراً – ٢:٠٠ صباحاً (الخميس والجمعة حتى ٣:٣٠ ص)">
+          KITCHEN SIZZLING • Open Daily 12:00 PM – 2:00 AM (Thu-Fri till 3:30 AM)
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-locations" data-en="📍 Mecca St • Abdoun • 7th Circle" data-ar="📍 شارع مكة • عبدون • الدوار السابع">
+          📍 Mecca St • Abdoun • 7th Circle
+        </span>
+        <a href="tel:+96265551234" class="top-phone">📞 +962 6 555 1234</a>
+        <button id="lang-toggle-btn" class="btn-lang" onclick="toggleLanguage()" aria-label="Switch Language">
+          <span class="lang-flag">🇯🇴</span>
+          <span class="lang-text">عربي</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <div class="logo-img-wrapper">
+          <img src="images/snap_logo.jpg" alt="Snap Burger Logo" class="brand-img">
+        </div>
+        <div class="logo-text">
+          <div class="logo-main"><span class="highlight-red">SNAP</span> <span class="highlight-yellow">BURGER</span></div>
+          <span class="logo-sub" id="logo-sub">سناب برجر • عمّان</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="#menu" class="nav-link" data-en="Menu" data-ar="قائمة الطعام">Menu</a>
+        <a href="#anatomy" class="nav-link" data-en="Why Smashed?" data-ar="سر السماش">Why Smashed?</a>
+        <a href="#offers" class="nav-link" data-en="Offers & Deals" data-ar="العروض">Offers & Deals</a>
+        <a href="#reviews" class="nav-link" data-en="Reviews" data-ar="آراء الزبائن">Reviews</a>
+        <a href="#about" class="nav-link" data-en="Our Story" data-ar="قصتنا">Our Story</a>
+        <a href="#contact" class="nav-link" data-en="Branches" data-ar="الفروع والتوصيل">Branches</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="btn-lang nav-lang-btn" onclick="toggleLanguage()" aria-label="Toggle language">
+          <span class="lang-text">عربي</span>
+        </button>
+        <a href="https://wa.me/962798765432?text=Hello%20Snap%20Burger%20Amman%2C%20I%20would%20like%20to%20order!" target="_blank" class="btn-whatsapp-nav">
+          <span class="wa-icon">💬</span>
+          <span data-en="Order on WhatsApp" data-ar="اطلب عبر واتساب">Order on WhatsApp</span>
+        </a>
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Navigation menu" id="mobile-toggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section id="home" class="hero-section">
+    <div class="hero-glow hero-glow-red"></div>
+    <div class="hero-glow hero-glow-yellow"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag-badge">
+          <span class="fire-icon">🔥</span>
+          <span data-en="AMMAN'S FAVORITE SMASH BURGER • 100% BLACK ANGUS" data-ar="أشهى سماش برجر في عمّان • لحم أنجوس ١٠٠٪">
+            AMMAN'S FAVORITE SMASH BURGER • 100% BLACK ANGUS
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          <span data-en="TASTE THE REAL" data-ar="تذوق القرمشة">TASTE THE REAL</span><br>
+          <span class="text-gradient-red" data-en="SMASH CRUNCH" data-ar="لأشهى سماش برجر">SMASH CRUNCH</span>
+        </h1>
+
+        <p class="hero-subtitle" id="hero-subtitle">
+          Fresh 100% Certified Black Angus Beef smashed thin on 450°F cast iron plates for signature caramelized lace edges. Hugged by buttery golden brioche baked fresh every morning in Amman.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-buttons">
+          <a href="https://wa.me/962798765432?text=Hello%20Snap%20Burger%20Amman!%20I%20want%20to%20place%20an%20order." target="_blank" class="btn btn-whatsapp-hero">
+            <span class="btn-icon">💬</span>
+            <div class="btn-text-group">
+              <span class="btn-sub" data-en="Direct Kitchen Chat" data-ar="محادثة فورية مع المطبخ">Direct Kitchen Chat</span>
+              <strong data-en="Order on WhatsApp" data-ar="اطلب عبر واتساب">Order on WhatsApp</strong>
+            </div>
+          </a>
+
+          <a href="#menu" class="btn btn-menu-hero">
+            <span class="btn-icon">🍔</span>
+            <div class="btn-text-group">
+              <span class="btn-sub" data-en="Explore All Items" data-ar="تصفح كافة الأصناف">Explore All Items</span>
+              <strong data-en="View Sizzling Menu" data-ar="استعرض قائمة الطعام">View Sizzling Menu</strong>
+            </div>
+          </a>
+
+          <a href="tel:+96265551234" class="btn btn-call-hero" title="Call Amman Kitchen">
+            <span class="btn-icon">📞</span>
+            <div class="btn-text-group">
+              <span class="btn-sub" data-en="Direct Call" data-ar="اتصال هاتفي">Direct Call</span>
+              <strong>06 555 1234</strong>
+            </div>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-features">
+          <div class="feature-item">
+            <span class="f-icon">🥩</span>
+            <div class="f-info">
+              <strong data-en="100% Black Angus" data-ar="بلاك أنجوس ١٠٠٪">100% Black Angus</strong>
+              <small data-en="Never frozen, daily minced" data-ar="طازج يومياً، غير مجمد">Never frozen</small>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="f-icon">🍞</span>
+            <div class="f-info">
+              <strong data-en="Daily Brioche" data-ar="خبز بريوش طازج">Daily Brioche</strong>
+              <small data-en="Baked in Amman daily" data-ar="يُخبز صباحاً بعمّان">Baked in Amman</small>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="f-icon">🔥</span>
+            <div class="f-info">
+              <strong data-en="450°F Sizzle Lace" data-ar="حواف مقرمشة">450°F Sizzle Lace</strong>
+              <small data-en="Crispy caramelized crunch" data-ar="قرمشة سماش أصلية">Crispy crunch</small>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="f-icon">⚡</span>
+            <div class="f-info">
+              <strong data-en="Fast Delivery" data-ar="توصيل سريع">Fast Delivery</strong>
+              <small data-en="Hot & crisp to your door" data-ar="ساخن وطازج لباب بيتك">Hot to your door</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Image Showcase -->
+      <div class="hero-visual">
+        <div class="hero-image-card">
+          <div class="burger-glow-circle"></div>
+          <img src="images/hero_burger.jpg" alt="Snap Burger Classic Smash Burger" class="hero-main-burger-img">
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-top-right">
+            <div class="badge-icon">⭐</div>
+            <div>
+              <strong>4.9 / 5.0</strong>
+              <span>2,800+ Jordan Reviews</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <div class="badge-icon">🧀</div>
+            <div>
+              <strong data-en="Double Melted Cheddar" data-ar="دبل شيدر ذائبة">Double Melted Cheddar</strong>
+              <span data-en="Pure American Cheese" data-ar="جبنة أمريكية أصلية">Pure American Cheese</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-center-bottom">
+            <div class="badge-icon">🔥</div>
+            <div>
+              <strong data-en="Sizzling Hot Now" data-ar="طازج وساخن الآن">Sizzling Hot Now</strong>
+              <span data-en="Ready in 8-10 Mins" data-ar="جاهز خلال ٨ دقائق">Ready in 8 Mins</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK MARQUEE / TICKER -->
+  <div class="ticker-wrapper">
+    <div class="ticker-content">
+      <span>🔥 FRESH BLACK ANGUS BEEF</span>
+      <span>•</span>
+      <span>🧀 DOUBLE MELTED AMERICAN CHEDDAR</span>
+      <span>•</span>
+      <span>🍞 ARTISAN POTATO BRIOCHE BUNS</span>
+      <span>•</span>
+      <span>💬 ORDER INSTANTLY VIA WHATSAPP (+962 7 9876 5432)</span>
+      <span>•</span>
+      <span>📍 MECCA ST • ABDOUN • 7TH CIRCLE</span>
+      <span>•</span>
+      <span>⚡ 25-MIN AVERAGE AMMAN DELIVERY</span>
+      <span>•</span>
+      <span>🔥 FRESH BLACK ANGUS BEEF</span>
+      <span>•</span>
+      <span>🧀 DOUBLE MELTED AMERICAN CHEDDAR</span>
+    </div>
+  </div>
+
+  <!-- 2. MENU SECTION -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-pill">
+          <span class="pill-dot"></span>
+          <span data-en="OUR SIZZLING CRAFTS" data-ar="قائمتنا المميزة">OUR SIZZLING CRAFTS</span>
+        </div>
+        <h2 class="section-title" data-en="Gourmet Smash Menu & Prices" data-ar="قائمة طعام سناب برجر والأسعار">Gourmet Smash Menu & Prices</h2>
+        <p class="section-desc" data-en="Every burger is crafted to order with 100% Certified Black Angus beef, melted cheddar, and secret Snap sauce. Tap any item to customize and order via WhatsApp!" data-ar="كل برجر يُحضر فورياً بلحم بلاك أنجوس طازج ١٠٠٪، شيدر ذائبة، وصلصة سناب السرية. اضغط على أي وجبة للتخصيص والطلب مباشرة عبر واتساب!">
+          Every burger is crafted to order with 100% Certified Black Angus beef, melted cheddar, and secret Snap sauce. Tap any item to customize and order via WhatsApp!
+        </p>
+      </div>
+
+      <!-- Search & Filters Container -->
+      <div class="menu-controls">
+        <div class="search-bar-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="menu-search-input" placeholder="Search burger, fries, shake... / ابحث عن أي وجبة..." oninput="handleMenuSearch(this.value)">
+          <button id="clear-search-btn" class="clear-btn" onclick="clearSearch()" style="display: none;">✕</button>
+        </div>
+
+        <div class="category-tabs" id="category-tabs">
+          <button class="tab-btn active" onclick="filterMenu('all', event)">
+            <span class="tab-icon">🌟</span>
+            <span data-en="All Items" data-ar="كافة الأصناف">All Items</span>
+          </button>
+          <button class="tab-btn" onclick="filterMenu('burgers', event)">
+            <span class="tab-icon">🍔</span>
+            <span data-en="Smash Burgers" data-ar="سماش برجر">Smash Burgers</span>
+          </button>
+          <button class="tab-btn" onclick="filterMenu('chicken', event)">
+            <span class="tab-icon">🍗</span>
+            <span data-en="Crispy Chicken" data-ar="دجاج مقرمش">Crispy Chicken</span>
+          </button>
+          <button class="tab-btn" onclick="filterMenu('meals', event)">
+            <span class="tab-icon">🍱</span>
+            <span data-en="Value Combos" data-ar="الوجبات والكومبو">Value Combos</span>
+          </button>
+          <button class="tab-btn" onclick="filterMenu('fries', event)">
+            <span class="tab-icon">🍟</span>
+            <span data-en="Loaded Sides" data-ar="المقبلات والبطاطا">Loaded Sides</span>
+          </button>
+          <button class="tab-btn" onclick="filterMenu('drinks', event)">
+            <span class="tab-icon">🥤</span>
+            <span data-en="Shakes & Drinks" data-ar="الميلك شيك والعصائر">Shakes & Drinks</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Items Grid (Rendered dynamically) -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Injected via script.js -->
+      </div>
+
+      <!-- Menu Bottom WhatsApp Banner -->
+      <div class="menu-cta-banner">
+        <div class="cta-banner-text">
+          <h3 data-en="Want something custom or planning a party gathering?" data-ar="تريد طلباً مخصصاً أو لديك عزومة أصدقاء؟">Want something custom or planning a party gathering?</h3>
+          <p data-en="Chat directly with our Amman kitchen team on WhatsApp. We cater gatherings, office lunches, and custom slider boxes!" data-ar="تحدث مباشرة مع فريق المطبخ في عمّان عبر واتساب. نوفر بوكسات الحفلات والطلبات المخصصة وتجمعات العمل!">
+            Chat directly with our Amman kitchen team on WhatsApp. We cater gatherings, office lunches, and custom slider boxes!
+          </p>
+        </div>
+        <a href="https://wa.me/962798765432?text=Hello%20Snap%20Burger%20Kitchen!%20I%20have%20a%20custom%20order%20question." target="_blank" class="btn btn-whatsapp">
+          <span>💬</span>
+          <span data-en="Message Kitchen Now" data-ar="راسل المطبخ الآن">Message Kitchen Now</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BURGER ANATOMY / WHY SMASHED? SECTION -->
+  <section id="anatomy" class="anatomy-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-pill">
+          <span class="pill-dot"></span>
+          <span data-en="THE SMASH SECRET" data-ar="سر الصنعة">THE SMASH SECRET</span>
+        </div>
+        <h2 class="section-title" data-en="The Anatomy of a Perfect Smash" data-ar="تشريح السماش برجر المثالي">The Anatomy of a Perfect Smash</h2>
+        <p class="section-desc" data-en="We don't do pre-formed frozen hockey pucks. Here is why our smash burgers in Amman hit differently." data-ar="لا نستخدم اللحوم الجاهزة المجمدة. إليك سر التميز في كل لقمة من سناب برجر.">
+          We don't do pre-formed frozen hockey pucks. Here is why our smash burgers in Amman hit differently.
+        </p>
+      </div>
+
+      <div class="anatomy-grid">
+        <div class="anatomy-card">
+          <div class="anatomy-step">01</div>
+          <div class="anatomy-icon">🍞</div>
+          <h3 data-en="Artisan Potato Brioche" data-ar="خبز بريوش البطاطا">Artisan Potato Brioche</h3>
+          <p data-en="Baked fresh every dawn by Amman bakers. Lightly toasted on the griddle with pure butter for a soft, pillow-like bite." data-ar="يُخبز فجر كل يوم بأيدي خبازين أردنيين، ومحمص بالزبدة النقية ليعطي قواماً طرياً كالغيمة.">
+            Baked fresh every dawn by Amman bakers. Lightly toasted on the griddle with pure butter.
+          </p>
+        </div>
+
+        <div class="anatomy-card">
+          <div class="anatomy-step">02</div>
+          <div class="anatomy-icon">🥫</div>
+          <h3 data-en="Secret Snap Sauce" data-ar="صلصة سناب السرية">Secret Snap Sauce</h3>
+          <p data-en="House-made blend with smoked paprika, pickle relish, Dijon mustard, and velvety mayo that elevates every bite." data-ar="خلطة سرية منزلية بالبابريكا المدخنة، قطع المخلل، والخردل الفرنسي لتجربة طعم لا تُنسى.">
+            House-made blend with smoked paprika, pickle relish, Dijon mustard, and velvety mayo.
+          </p>
+        </div>
+
+        <div class="anatomy-card highlight-card">
+          <div class="anatomy-step">03</div>
+          <div class="anatomy-icon">🥩🔥</div>
+          <h3 data-en="Crispy Caramelized Lace" data-ar="قرمشة الحواف المكرملة">Crispy Caramelized Lace</h3>
+          <p data-en="Fresh Angus beef balls smashed with heavy iron press onto 450°F sizzling griddles, creating the Maillard reaction crust." data-ar="كرات لحم أنجوس الطازجة تُكبس بقوة على صاج ٤٥٠ درجة مئوية لتكوين الحواف المقرمشة الأسطورية.">
+            Fresh Angus beef balls smashed with heavy iron press onto 450°F sizzling griddles.
+          </p>
+        </div>
+
+        <div class="anatomy-card">
+          <div class="anatomy-step">04</div>
+          <div class="anatomy-icon">🧀</div>
+          <h3 data-en="Double Melted Cheddar" data-ar="شيدر أمريكية ذائبة">Double Melted Cheddar</h3>
+          <p data-en="Melted deep into every nook and cranny of the beef patties, binding the layers together in gooey bliss." data-ar="تذوب في تفاصيل اللحم الساخن لتمنحك قواماً كريمياً وغنياً لا يقاوم.">
+            Melted deep into every nook and cranny of the beef patties, binding the layers together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. OFFERS SECTION -->
+  <section id="offers" class="offers-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-pill">
+          <span class="pill-dot"></span>
+          <span data-en="HOT DEALS" data-ar="عروض حصرية">HOT DEALS</span>
+        </div>
+        <h2 class="section-title" data-en="Amman Crave Boxes & Combos" data-ar="بوكسات التوفير وعروض عمّان">Amman Crave Boxes & Combos</h2>
+        <p class="section-desc" data-en="Maximum taste at unbeatable prices. Tap to claim directly on WhatsApp!" data-ar="أشهى نكهة بأفضل الأسعار. اضغط لطلب العرض مباشرة عبر واتساب!">
+          Maximum taste at unbeatable prices. Tap to claim directly on WhatsApp!
+        </p>
+      </div>
+
+      <div class="offers-grid">
+        <!-- Deal 1 -->
+        <div class="offer-card">
+          <div class="offer-badge" data-en="50% OFF 2ND BURGER" data-ar="٥٠٪ خصم على البرجر الثاني">50% OFF 2ND BURGER</div>
+          <div class="offer-image-wrap">
+            <img src="images/burger_classic.jpg" alt="Midweek Smash Mania Deal" class="offer-img">
+          </div>
+          <div class="offer-card-body">
+            <span class="deal-duration" data-en="Sun to Wed • All Day" data-ar="الأحد إلى الأربعاء • طوال اليوم">Sun to Wed • All Day</span>
+            <h3 data-en="Midweek Smash Mania" data-ar="عرض منتصف الأسبوع">Midweek Smash Mania</h3>
+            <p data-en="Order any double smash burger (Snap Classic or Truffle) and receive the second double smash burger at 50% discount!" data-ar="اطلب أي برجر دبل سماش (كلاسيك أو ترافل) واحصل على البرجر الثاني بخصم ٥٠٪ فورياً!">
+              Order any double smash burger and get the second burger at half price!
+            </p>
+            <div class="offer-pricing">
+              <span class="current-price">6.35 JOD</span>
+              <span class="old-price">8.50 JOD</span>
+              <span class="save-badge" data-en="SAVE 2.15 JOD" data-ar="توفير ٢.١٥ د.أ">SAVE 2.15 JOD</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="orderWhatsAppDirect('Midweek Smash Mania Deal (6.35 JOD)')" data-en="💬 Order Deal on WhatsApp" data-ar="💬 اطلب العرض عبر واتساب">
+              💬 Order Deal on WhatsApp
+            </button>
+          </div>
+        </div>
+
+        <!-- Deal 2 -->
+        <div class="offer-card featured-offer">
+          <div class="offer-badge featured-badge" data-en="LATE NIGHT HERO" data-ar="عرض جوع آخر الليل">LATE NIGHT HERO</div>
+          <div class="offer-image-wrap">
+            <img src="images/combo_meal.jpg" alt="Late Night Crave Box" class="offer-img">
+          </div>
+          <div class="offer-card-body">
+            <span class="deal-duration" data-en="Daily 11:00 PM – 2:00 AM" data-ar="يومياً ١١:٠٠ م – ٢:٠٠ ص">Daily 11:00 PM – 2:00 AM</span>
+            <h3 data-en="Late Night Crave Box" data-ar="بوكس جوع آخر الليل">Late Night Crave Box</h3>
+            <p data-en="1 Double Smash Burger + Medium Loaded Cheddar Fries + Cold Soft Drink + 1 Warm Chocolate Chip Cookie at special night owl price." data-ar="١ دبل سماش برجر + لوديد فرايز وسط بالجبنة + مشروب غازي بارد + كوكيز شوكولاتة طازجة بسعر خاص لعشاق السهر!">
+              Double smash burger + medium loaded fries + soft drink + warm chocolate cookie.
+            </p>
+            <div class="offer-pricing">
+              <span class="current-price">4.99 JOD</span>
+              <span class="old-price">6.75 JOD</span>
+              <span class="save-badge" data-en="SAVE 1.76 JOD" data-ar="توفير ١.٧٦ د.أ">SAVE 1.76 JOD</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="orderWhatsAppDirect('Late Night Crave Box (4.99 JOD)')" data-en="💬 Order Deal on WhatsApp" data-ar="💬 اطلب العرض عبر واتساب">
+              💬 Order Deal on WhatsApp
+            </button>
+          </div>
+        </div>
+
+        <!-- Deal 3 -->
+        <div class="offer-card">
+          <div class="offer-badge" data-en="FAMILY / FRIENDS" data-ar="عرض العائلة والأصدقاء">FAMILY / FRIENDS</div>
+          <div class="offer-image-wrap">
+            <img src="images/hero_burger.jpg" alt="Amman Squad Feast" class="offer-img">
+          </div>
+          <div class="offer-card-body">
+            <span class="deal-duration" data-en="Thursday & Friday Special" data-ar="عطلة نهاية الأسبوع (الخميس والجمعة)">Thursday & Friday Special</span>
+            <h3 data-en="Amman Squad Feast (For 4)" data-ar="بوكس لِمة الأصحاب (٤ أشخاص)">Amman Squad Feast (For 4)</h3>
+            <p data-en="4 Burgers of choice (Angus Smash or Zinger) + 2 Large Loaded Fries + 4 Cold Drinks + 4 Dips sauce cups." data-ar="٤ سندويشات برجر من اختيارك + ٢ طبق بطاطا لوديد كبير بالجبنة + ٤ مشروبات باردة + ٤ عبوات صوص خاص!">
+              4 Burgers + 2 Large Loaded Fries + 4 Drinks + 4 Dipping Sauces.
+            </p>
+            <div class="offer-pricing">
+              <span class="current-price">17.50 JOD</span>
+              <span class="old-price">23.00 JOD</span>
+              <span class="save-badge" data-en="SAVE 5.50 JOD" data-ar="توفير ٥.٥٠ د.أ">SAVE 5.50 JOD</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="orderWhatsAppDirect('Amman Squad Feast (17.50 JOD)')" data-en="💬 Order Deal on WhatsApp" data-ar="💬 اطلب العرض عبر واتساب">
+              💬 Order Deal on WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CUSTOMER REVIEWS SECTION -->
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-pill">
+          <span class="pill-dot"></span>
+          <span data-en="AMMAN FOODIES" data-ar="عشاق البرجر في عمّان">AMMAN FOODIES</span>
+        </div>
+        <h2 class="section-title" data-en="What Amman is Saying" data-ar="آراء زبائننا في الأردن">What Amman is Saying</h2>
+        <div class="reviews-rating-header">
+          <span class="stars-gold">★★★★★</span>
+          <strong>4.9 / 5.0</strong>
+          <span data-en="based on 2,800+ Google Reviews" data-ar="بناءً على أكثر من ٢٨٠٠ تقييم في جوجل">based on 2,800+ Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">ت.خ</div>
+            <div>
+              <strong>Tariq Al-Khatib</strong>
+              <span>Mecca Street Customer • زبون شارع مكة</span>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p data-en="Hands down the crunchiest smash burger in Jordan! The lace edges on the beef are caramelized to perfection, and the potato brioche is unbelievably soft. Truffle beast is my go-to." data-ar="بدون أي مبالغة، أطيب وأقرمش سماش برجر جربته بعمّان! حواف اللحم مكرملة ومقرمشة والخبز طري جداً كأنه قطن. الترافل بيست إدمان!">
+            "Hands down the crunchiest smash burger in Jordan! The lace edges on the beef are caramelized to perfection, and the potato brioche is unbelievably soft. Truffle beast is my go-to."
+          </p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">ر.ح</div>
+            <div>
+              <strong>Rania Haddad</strong>
+              <span>Abdoun Regular • زبونة عبدون</span>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p data-en="Ordering via WhatsApp is super fast! Got my order hot within 22 minutes to Abdoun. The loaded cheddar fries and fiery jalapeño smash are unmatched in Amman." data-ar="الطلب عن طريق الواتساب سهل وسريع جداً! وصل الطلب ساخن ومقرمش خلال ٢٢ دقيقة. اللوديد فرايز وبرجر الهلابينو لا يعلى عليهم!">
+            "Ordering via WhatsApp is super fast! Got my order hot within 22 minutes to Abdoun. The loaded cheddar fries and fiery jalapeño smash are unmatched in Amman."
+          </p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">س.ع</div>
+            <div>
+              <strong>Samer Al-Otaibi</strong>
+              <span>7th Circle Branch • فرع الدوار السابع</span>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p data-en="100% real Black Angus meat that is juicy, not greasy. You can actually taste the quality of the beef and butter brioche. Late Night Crave Box saved my midnight hunger." data-ar="لحم أنجوس أصلي ١٠٠٪ طري ومو مدهن نهائياً. الجودة واضحة باللحمة والخبز. بوكس جوع آخر الليل أنقذني بنص الليل وكررته كثير!">
+            "100% real Black Angus meat that is juicy, not greasy. You can actually taste the quality of the beef and butter brioche. Late Night Crave Box saved my midnight hunger."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ABOUT SECTION -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <div class="section-tag-pill">
+          <span class="pill-dot"></span>
+          <span data-en="OUR STORY" data-ar="قصتنا في الأردن">OUR STORY</span>
+        </div>
+        <h2 class="section-title" data-en="Born in Amman with an Obsession for Real Smash" data-ar="انطلقنا من عمّان بشغف السماش برجر الأصيل">
+          Born in Amman with an Obsession for Real Smash
+        </h2>
+        <p class="about-p" data-en="Snap Burger started in Amman with one unapologetic philosophy: real food, zero frozen shortcuts. We reject processed frozen patties and artificial tenderizers. Every morning, our butchery team grinds 100% Certified Black Angus beef in-house." data-ar="تأسس سناب برجر في عمّان بمبدأ واحد واضح: طعام حقيقي، وبدون أي مجمدات أو بدائل جاهزة. نرفض اللحوم المصنعة والمجمدة، ونفرم يومياً في مطبخنا لحم بلاك أنجوس طازج ١٠٠٪.">
+          Snap Burger started in Amman with one unapologetic philosophy: real food, zero frozen shortcuts. We reject processed frozen patties and artificial tenderizers. Every morning, our butchery team grinds 100% Certified Black Angus beef in-house.
+        </p>
+        <p class="about-p" data-en="Our potato brioche buns are custom-baked every single morning by local Amman artisan bakeries using real butter, ensuring they never turn soggy under our juicy smash patties." data-ar="خبز البريوش الطازج يُخبز خصيصاً لنا كل صباح بأيدي خبازين أردنيين بالزبدة النقية ليبقى دافئاً ومتماسكاً مع عصارة اللحم المقرمش.">
+          Our potato brioche buns are custom-baked every single morning by local Amman artisan bakeries using real butter.
+        </p>
+
+        <div class="why-us-list">
+          <div class="why-item">
+            <span class="why-icon">🥩</span>
+            <div>
+              <h4 data-en="100% Certified Angus Beef" data-ar="لحم بلاك أنجوس معتمد ١٠٠٪">100% Certified Angus Beef</h4>
+              <p data-en="Hand-minced daily, seasoned with pure sea salt and cracked pepper." data-ar="مفروم يومياً، متبل بملح البحر والفلفل الأسود المجروش.">Hand-minced daily, seasoned with pure sea salt.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-icon">🍞</span>
+            <div>
+              <h4 data-en="Daily Baked Amman Brioche" data-ar="خبز بريوش طازج يومياً بعمّان">Daily Baked Amman Brioche</h4>
+              <p data-en="Fresh from the oven every morning with pure unsalted butter." data-ar="طازج من الفرن صباح كل يوم ومعد بالزبدة البلدية النقية.">Fresh from the oven every morning.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-icon">⚡</span>
+            <div>
+              <h4 data-en="Super-Fast WhatsApp Delivery" data-ar="توصيل سريع ومباشر عبر واتساب">Super-Fast WhatsApp Delivery</h4>
+              <p data-en="Direct WhatsApp kitchen dispatch with live dispatch tracking." data-ar="طلبك يُجهز فور إرساله ويصلك ساخناً لباب منزلك.">Direct kitchen dispatch.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <div class="about-card-banner">
+          <img src="images/snap_logo.jpg" alt="Snap Burger Amman Badge" class="about-badge-img">
+          <div class="about-stat-row">
+            <div class="stat-box">
+              <span class="stat-num">100%</span>
+              <span class="stat-lbl" data-en="Black Angus Beef" data-ar="لحم أنجوس فاخر">Black Angus</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">450°F</span>
+              <span class="stat-lbl" data-en="Smash Sizzle" data-ar="حرارة الصاج">Smash Sizzle</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">3</span>
+              <span class="stat-lbl" data-en="Amman Branches" data-ar="فروع في عمّان">Branches</span>
+            </div>
+          </div>
+          <div class="about-quote" data-en="“Smashed with Passion, Served with Jordan Pride.”" data-ar="«محضر بشغف، ونقدمه بفخر أردني.»">
+            “Smashed with Passion, Served with Jordan Pride.”
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CONTACT & BRANCHES SECTION -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag-pill">
+          <span class="pill-dot"></span>
+          <span data-en="VISIT & ORDER" data-ar="الفروع والطلب">VISIT & ORDER</span>
+        </div>
+        <h2 class="section-title" data-en="Our 3 Amman Branches & Hours" data-ar="فروعنا الـ٣ في عمّان وساعات العمل">Our 3 Amman Branches & Hours</h2>
+        <p class="section-desc" data-en="Dine-in, takeaway, or direct fast delivery anywhere in Amman via WhatsApp!" data-ar="تفضل بزيارتنا لتناول الوجبة، استلم طلبك، أو اطلب توصيلاً سريعاً لأي مكان بعمّان عبر واتساب!">
+          Dine-in, takeaway, or direct fast delivery anywhere in Amman via WhatsApp!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Branch 1 -->
+        <div class="branch-card">
+          <div class="branch-header">
+            <span class="branch-pin">📍</span>
+            <div>
+              <h3 data-en="Mecca Street Branch" data-ar="فرع شارع مكة">Mecca Street Branch</h3>
+              <span class="branch-sub" data-en="Main Flagship & Late Night Kitchen" data-ar="الفرع الرئيسي ومطبخ السهرة">Main Flagship Kitchen</span>
+            </div>
+          </div>
+          <p class="branch-addr" data-en="Complex 142, Next to City Mall & Amman Waves, Mecca St, Amman" data-ar="مجمع ١٤٢، بجانب سيتي مول، شارع مكة، عمّان">
+            Complex 142, Next to City Mall & Amman Waves, Mecca St, Amman
+          </p>
+          <div class="branch-meta">
+            <span>⏰ 12:00 PM – 2:00 AM (Thu-Fri 3:30 AM)</span>
+            <span>📞 <a href="tel:+96265551234">+962 6 555 1234</a></span>
+          </div>
+          <div class="branch-actions">
+            <a href="https://maps.google.com/?q=Mecca+St+Amman+Jordan" target="_blank" class="btn-directions">
+              🗺️ <span data-en="Get Directions" data-ar="الاتجاهات على الخريطة">Get Directions</span>
+            </a>
+            <button class="btn-branch-wa" onclick="orderWhatsAppDirect('Order for Mecca Street Branch pickup/delivery')">
+              💬 <span data-en="Order from Mecca St" data-ar="اطلب من فرع مكة">Order from Mecca St</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Branch 2 -->
+        <div class="branch-card">
+          <div class="branch-header">
+            <span class="branch-pin">📍</span>
+            <div>
+              <h3 data-en="Abdoun Branch" data-ar="فرع عبدون">Abdoun Branch</h3>
+              <span class="branch-sub" data-en="Cozy Dine-In & Terrace" data-ar="صالة طعام وجلسات خارجية">Cozy Dine-In & Terrace</span>
+            </div>
+          </div>
+          <p class="branch-addr" data-en="Damascus Street, Near Abdoun Circle & Blue Fig, Amman" data-ar="شارع دمشق، بالقرب من دوار عبدون، عمّان">
+            Damascus Street, Near Abdoun Circle & Blue Fig, Amman
+          </p>
+          <div class="branch-meta">
+            <span>⏰ 12:00 PM – 1:30 AM Daily</span>
+            <span>📞 <a href="tel:+96265551235">+962 6 555 1235</a></span>
+          </div>
+          <div class="branch-actions">
+            <a href="https://maps.google.com/?q=Abdoun+Circle+Amman+Jordan" target="_blank" class="btn-directions">
+              🗺️ <span data-en="Get Directions" data-ar="الاتجاهات على الخريطة">Get Directions</span>
+            </a>
+            <button class="btn-branch-wa" onclick="orderWhatsAppDirect('Order for Abdoun Branch pickup/delivery')">
+              💬 <span data-en="Order from Abdoun" data-ar="اطلب من فرع عبدون">Order from Abdoun</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Branch 3 -->
+        <div class="branch-card">
+          <div class="branch-header">
+            <span class="branch-pin">📍</span>
+            <div>
+              <h3 data-en="7th Circle Branch" data-ar="فرع الدوار السابع">7th Circle Branch</h3>
+              <span class="branch-sub" data-en="Express Drive-Thru & Pickup" data-ar="استلام سريع وخدمة سيارات">Express Drive-Thru & Pickup</span>
+            </div>
+          </div>
+          <p class="branch-addr" data-en="Zahran Street, Behind Royal Jordanian Building, Amman" data-ar="شارع زهران، خلف مبنى الملكية الأردنية، عمّان">
+            Zahran Street, Behind Royal Jordanian Building, Amman
+          </p>
+          <div class="branch-meta">
+            <span>⏰ 12:00 PM – 2:00 AM Daily</span>
+            <span>📞 <a href="tel:+96265551236">+962 6 555 1236</a></span>
+          </div>
+          <div class="branch-actions">
+            <a href="https://maps.google.com/?q=7th+Circle+Amman+Jordan" target="_blank" class="btn-directions">
+              🗺️ <span data-en="Get Directions" data-ar="الاتجاهات على الخريطة">Get Directions</span>
+            </a>
+            <button class="btn-branch-wa" onclick="orderWhatsAppDirect('Order for 7th Circle Branch pickup/delivery')">
+              💬 <span data-en="Order from 7th Circle" data-ar="اطلب من الدوار السابع">Order from 7th Circle</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Delivery Dispatch Callout -->
+      <div class="delivery-callout-card">
+        <div class="delivery-icon">🛵💨</div>
+        <div class="delivery-text">
+          <h3 data-en="Fast Amman Doorstep Delivery" data-ar="توصيل سريع لكافة مناطق عمّان">Fast Amman Doorstep Delivery</h3>
+          <p data-en="Delivering fresh and piping hot to Khalda, Dabouq, Abdoun, Sweifieh, Shmeisani, Jabal Amman, University Street, Jubaiha, and beyond!" data-ar="نوصل طازجاً وساخناً إلى خلدا، دابوق، عبدون، الصويفية، الشميساني، جبل عمّان، شارع الجامعة، الجبيهة، وكافة مناطق عمّان!">
+            Delivering fresh and piping hot to Khalda, Dabouq, Abdoun, Sweifieh, Shmeisani, Jabal Amman, University Street, Jubaiha, and beyond!
+          </p>
+        </div>
+        <a href="https://wa.me/962798765432?text=Hello%20Snap%20Burger!%20I%20want%20delivery%20in%20Amman." target="_blank" class="btn btn-whatsapp">
+          <span>💬</span>
+          <span data-en="Order Delivery Now" data-ar="اطلب التوصيل الآن">Order Delivery Now</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <img src="images/snap_logo.jpg" alt="Snap Burger" class="footer-logo-img">
+          <span class="logo-main"><span class="highlight-red">SNAP</span> <span class="highlight-yellow">BURGER</span></span>
+        </div>
+        <p data-en="Amman's favorite gourmet smash burger spot. Hand-minced Black Angus beef, artisan brioche baked daily, and crisp caramelized lace." data-ar="مطعم السماش برجر المفضل في عمّان. لحم أنجوس فاخر مفروم يومياً، خبز بريوش طازج، وقرمشة حواف أسطورية.">
+          Amman's favorite gourmet smash burger spot. Hand-minced Black Angus beef, artisan brioche baked daily, and crisp caramelized lace.
+        </p>
+        <div class="social-pills">
+          <a href="https://instagram.com/snapburger.jo" target="_blank" class="social-pill" title="Instagram">📸 Instagram</a>
+          <a href="https://facebook.com/snapburger.jordan" target="_blank" class="social-pill" title="Facebook">📘 Facebook</a>
+          <a href="https://tiktok.com/@snapburger_jo" target="_blank" class="social-pill" title="TikTok">🎵 TikTok</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+        <ul>
+          <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="#menu" data-en="Our Menu & Prices" data-ar="قائمة الطعام والأسعار">Our Menu & Prices</a></li>
+          <li><a href="#offers" data-en="Special Deals" data-ar="العروض الخاصة">Special Deals</a></li>
+          <li><a href="#anatomy" data-en="The Smash Secret" data-ar="سر السماش">The Smash Secret</a></li>
+          <li><a href="#contact" data-en="Amman Branches" data-ar="فروع عمّان">Amman Branches</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-en="Direct Contact" data-ar="التواصل المباشر">Direct Contact</h4>
+        <p><strong>📞 Kitchen Hotline:</strong> <a href="tel:+96265551234">+962 6 555 1234</a></p>
+        <p><strong>💬 WhatsApp:</strong> <a href="https://wa.me/962798765432" target="_blank">+962 7 9876 5432</a></p>
+        <p><strong>📍 Locations:</strong> Mecca St, Abdoun, 7th Circle</p>
+        <p><strong>⏰ Working Hours:</strong> 12:00 PM – 2:00 AM Daily</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Snap Burger Jordan. All Rights Reserved. صنع بكل فخر وحب في عمّان، الأردن 🇯🇴</p>
+        <div class="footer-badge-halal">
+          <span>🥩 100% Halal Certified Angus Beef</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ITEM CUSTOMIZATION MODAL -->
+  <div id="item-modal" class="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      
+      <div class="modal-img-wrap">
+        <img id="modal-item-img" src="" alt="Burger Image" class="modal-img">
+        <span id="modal-item-badge" class="modal-badge"></span>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-header-row">
+          <h3 id="modal-item-title" class="modal-title"></h3>
+          <span id="modal-item-price" class="modal-price"></span>
+        </div>
+
+        <p id="modal-item-desc" class="modal-desc"></p>
+
+        <!-- Customization Options -->
+        <div class="custom-section">
+          <h4 data-en="Customize Your Order" data-ar="خصص وجبتك">Customize Your Order</h4>
+          
+          <label class="custom-checkbox">
+            <input type="checkbox" id="extra-cheese-cb" onchange="calculateModalTotal()">
+            <span class="custom-label">
+              <span data-en="Extra Melted American Cheddar" data-ar="جبنة شيدر أمريكية إضافية">Extra Melted American Cheddar</span>
+              <span class="add-price">+0.50 JOD</span>
+            </span>
+          </label>
+
+          <label class="custom-checkbox">
+            <input type="checkbox" id="extra-sauce-cb" onchange="calculateModalTotal()">
+            <span class="custom-label">
+              <span data-en="Extra Secret Snap Sauce Dip" data-ar="صلصة سناب السرية إضافية">Extra Secret Snap Sauce Dip</span>
+              <span class="add-price">+0.35 JOD</span>
+            </span>
+          </label>
+
+          <label class="custom-checkbox">
+            <input type="checkbox" id="extra-jalapeno-cb" onchange="calculateModalTotal()">
+            <span class="custom-label">
+              <span data-en="Spicy Pickled Jalapeño Coins" data-ar="قطع هلابينو حارة">Spicy Pickled Jalapeño Coins</span>
+              <span class="add-price">+0.25 JOD</span>
+            </span>
+          </label>
+
+          <label class="custom-checkbox">
+            <input type="checkbox" id="extra-bacon-cb" onchange="calculateModalTotal()">
+            <span class="custom-label">
+              <span data-en="Crispy Halal Beef Bacon Strips" data-ar="شرائح بيف بيكون مقرمشة">Crispy Halal Beef Bacon Strips</span>
+              <span class="add-price">+0.75 JOD</span>
+            </span>
+          </label>
+        </div>
+
+        <!-- Kitchen Notes -->
+        <div class="notes-section">
+          <label for="modal-notes" data-en="Kitchen Notes (e.g., no onions, sauce on side):" data-ar="ملاحظات للمطبخ (مثلاً: بدون بصل، الصوص على جنب):">
+            Kitchen Notes:
+          </label>
+          <input type="text" id="modal-notes" placeholder="Write any special requests... / أي طلب خاص...">
+        </div>
+
+        <!-- Quantity Controls & Total -->
+        <div class="modal-footer-row">
+          <div class="quantity-picker">
+            <button class="qty-btn" onclick="changeQuantity(-1)">−</button>
+            <span id="modal-qty" class="qty-val">1</span>
+            <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+          </div>
+
+          <div class="modal-total-wrap">
+            <span class="total-label" data-en="Total:" data-ar="المجموع:">Total:</span>
+            <strong id="modal-total-price" class="total-val">4.25 JOD</strong>
+          </div>
+        </div>
+
+        <!-- WhatsApp Order Button -->
+        <button class="btn btn-whatsapp btn-block modal-order-btn" onclick="submitModalOrder()">
+          <span>💬</span>
+          <span data-en="Send Order to Kitchen on WhatsApp" data-ar="إرسال الطلب للمطبخ عبر واتساب">
+            Send Order to Kitchen on WhatsApp
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON (Desktop & Mobile) -->
+  <a href="https://wa.me/962798765432?text=Hello%20Snap%20Burger%20Amman!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="floating-wa" title="Order via WhatsApp / اطلب عبر واتساب" aria-label="Order via WhatsApp">
+    <span class="floating-wa-icon">💬</span>
+    <span class="floating-wa-label" data-en="Order on WhatsApp" data-ar="اطلب عبر واتساب">Order on WhatsApp</span>
+    <span class="floating-wa-pulse"></span>
+  </a>
+
+  <!-- MOBILE STICKY BOTTOM BAR -->
+  <div class="mobile-sticky-bar">
+    <a href="#menu" class="mobile-bar-btn menu-btn">
+      <span>🍔</span>
+      <span data-en="Menu" data-ar="القائمة">Menu</span>
+    </a>
+    <a href="https://wa.me/962798765432?text=Hello%20Snap%20Burger!%20I%20want%20to%20order." target="_blank" class="mobile-bar-btn wa-btn">
+      <span>💬</span>
+      <strong data-en="WhatsApp Order" data-ar="طلب واتساب">WhatsApp Order</strong>
+    </a>
+    <a href="tel:+96265551234" class="mobile-bar-btn call-btn">
+      <span>📞</span>
+      <span data-en="Call" data-ar="اتصال">Call</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

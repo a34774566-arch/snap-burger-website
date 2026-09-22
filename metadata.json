@@ -1,0 +1,6 @@
+{
+  "name": "Snap Burger",
+  "description": "Snap Burger - Premium fast-food burger restaurant in Amman, Jordan. Explore our menu, exclusive combos, restaurant story, and order instantly via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
